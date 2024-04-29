@@ -1,0 +1,123 @@
+﻿<UserControl x:Class="Register.UserControls.EladUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Register.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="1080" d:DesignWidth="1920"
+             >
+    <ContentControl.Resources>
+        <ResourceDictionary Source="Style.xaml"/>
+    </ContentControl.Resources>
+    <Grid  Background="#FF2A4063">
+        <Grid Background="#FF2A4063" x:Name="grid1">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="0.9*"/>
+            <RowDefinition Height="0.1*"/>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.2*"/>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="0.2*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="1" x:Name="spCimSor"  Orientation="Horizontal" HorizontalAlignment="Center">
+            <Label FontFamily="Bahnschrift SemiBold" FontSize="72" FontStretch="Expanded" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" VerticalAlignment="Center" FontWeight="Bold" Content="Regi'ster" Background="{x:Null}" Foreground="#FFD4D4D4"/>
+            </StackPanel>
+
+            <StackPanel x:Name="spItems" Grid.Row="1" Grid.Column="0" ScrollViewer.VerticalScrollBarVisibility="Auto">
+            <ListBox  Grid.IsSharedSizeScope="True" Height="{Binding ElementName=spItems, Path=ActualHeight}" x:Name="lbItemsIn" FontSize="24" BorderThickness="3,5,3,3" BorderBrush="#FF545558" SelectionMode="Multiple" Background="#FFA9B7D8" FontFamily="Ebrima"/>
+
+            </StackPanel>
+
+        <StackPanel x:Name="spTotal" Grid.Row="2">
+            <Label Height="{Binding ElementName=spTotal, Path=ActualHeight}" x:Name="lbTotal" Content="" FontSize="48" FontFamily="Bahnschrift SemiBold Condensed" BorderThickness="3,3,3,3" BorderBrush="#FF3A3838" Background="#FFB9ADAD" VerticalAlignment="Center" VerticalContentAlignment="Center" Padding="5,5,5,5" HorizontalContentAlignment="Stretch"/>
+        </StackPanel>
+        <ContentControl x:Name="ccKategoriak" Grid.Row="1" Grid.Column="1" >
+
+            </ContentControl>
+            <Grid Grid.Row="2" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Viewbox  Grid.Column="0" Stretch="Fill">
+                <Button Content="X" Foreground="White" Background="#FFC70000" FontFamily="Ravie" Click="removeItems" BorderBrush="#FF272727" Padding="1,1,1,1" />
+            </Viewbox>
+            <Viewbox  Grid.Column="1" Grid.ColumnSpan="2" Stretch="Fill">
+                <Button Content="Kiválaszt" Grid.Column="1" Foreground="White" Background="#FF609E2F" FontFamily="Bahnschrift SemiBold" Click="selectAllItems" BorderBrush="#FF272727" Padding="2,5,2,3"/>
+            </Viewbox>
+            <Viewbox  Grid.Column="8" Grid.ColumnSpan="2" Stretch="Fill">
+                <Button Content="Kilépés" Foreground="White" Background="#FF690000" FontFamily="Bahnschrift SemiBold" Click="btnExit" BorderBrush="#FF272727" Padding="2,5,2,3"/>
+            </Viewbox>
+            <Viewbox Grid.Column="3"  Grid.ColumnSpan="2" Stretch="Fill">
+                <Button Content="Fizetés" Foreground="White" Background="#FF166900" FontFamily="Bahnschrift SemiBold" Click="createInvoice" BorderBrush="#FF272727" Padding="2,5,2,3"/>
+            </Viewbox>
+            <Viewbox  Grid.ColumnSpan="3" Grid.Column="5"  Stretch="Fill">
+                <Button Content="Számlakezelés" Foreground="White" Background="DeepSkyBlue" FontFamily="Bahnschrift SemiBold" BorderBrush="#FF272727" Click="szamlahozAd" Padding="2,5,2,3"/>
+            </Viewbox>
+
+        </Grid>
+
+        <Grid Grid.Column="2" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.4*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="0.4*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.3*"/>
+                <RowDefinition Height="0.3*"/>
+                <RowDefinition Height="0.3*"/>
+                <RowDefinition Height="0.3*"/>
+                <RowDefinition Height="0.9*"/>
+            </Grid.RowDefinitions>
+            <Button  Style="{StaticResource bt}" Grid.Column="1" Grid.Row="0" Content="1" FontSize="50" FontWeight="Bold" FontFamily="Tahoma" Click="btnOne"/>
+            <Button  Style="{StaticResource bt}"   Grid.Column="2" Grid.Row="0" Content="2"  FontSize="50" FontWeight="Bold" FontFamily="Tahoma" Click="btnTwo"/>
+            <Button Style="{StaticResource bt}"  Grid.Column="3" Grid.Row="0" Content="3"  FontSize="50" FontWeight="Bold" FontFamily="Tahoma" Click="btnThree"/>
+
+            <Button Style="{StaticResource bt}" Grid.Column="1" Grid.Row="1" Content="4"   FontSize="50" FontWeight="Bold" FontFamily="Tahoma" Click="btnFour"/>
+            <Button Style="{StaticResource bt}" Grid.Column="2" Grid.Row="1" Content="5"   FontSize="50" FontWeight="Bold" FontFamily="Tahoma" Click="btnFive"/>
+            <Button Style="{StaticResource bt}" Grid.Column="3" Grid.Row="1" Content="6"   FontSize="50" FontWeight="Bold" FontFamily="Tahoma" Click="btnSix"/>
+
+            <Button Style="{StaticResource bt}" Grid.Column="1" Grid.Row="2" Content="7"   FontSize="50" FontWeight="Bold" FontFamily="Tahoma" Click="btnSeven"/>
+            <Button Style="{StaticResource bt}" Grid.Column="2" Grid.Row="2" Content="8"   FontSize="50" FontWeight="Bold" FontFamily="Tahoma" Click="btnEight"/>
+            <Button Style="{StaticResource bt}" Grid.Column="3" Grid.Row="2" Content="9"   FontSize="50" FontWeight="Bold" FontFamily="Tahoma" Click="btnNine"/>
+
+            <Button Style="{StaticResource bt}" Grid.Column="1" Grid.Row="3" Content="00"   FontSize="40" FontWeight="Bold" FontFamily="Tahoma" Click="btnDoubleZero"/>
+            <Button Style="{StaticResource bt}" Grid.Column="2" Grid.Row="3" Content="0"   FontSize="50" FontWeight="Bold" FontFamily="Tahoma" Click="btnZero"/>
+            <Button Style="{StaticResource bt}" Grid.Column="3" Grid.Row="3" Content="X"   FontSize="50" FontWeight="Bold" FontFamily="Tahoma" Click="btnClearField"/>
+        </Grid>
+        
+        
+    
+        <StackPanel x:Name="spField" Grid.Column="2" Grid.Row="2">
+            <Label Content="" x:Name="lbField" Height="{Binding ElementName=spField, Path=ActualHeight}" Width="{Binding ElementName=spField, Path=ActualWidth}" FontSize="48" FontWeight="Bold" Background="#339C9C9C" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        </StackPanel>
+            
+        <Popup Width="2000" Height="5000" Name="popup" IsOpen="False" StaysOpen="False" Placement="Center" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,400,0,0">
+                <StackPanel Width="Auto" Height="5000"  Background="#FF2A4063" Margin="0,20,0,0">
+                <TextBlock Text="Jelentkezz be a művelethez!" Height="50" Width="1000" Margin="0,50,0,20" HorizontalAlignment="Center" FontSize="40" VerticalAlignment="Center" TextAlignment="Center"/>
+                <TextBlock Text="Dolgozó"  Width="1000" Margin="0,50,0,20" HorizontalAlignment="Center" FontSize="40" VerticalAlignment="Center" TextAlignment="Center"/>
+               
+                <ComboBox x:Name="lbProfilok" HorizontalAlignment="Center" Width="300" Height="30" Margin="0,0,0,20" VerticalAlignment="Center"/>
+                <TextBlock Text="Jelszó" Height="50" Width="700" Margin="0,50,0,20" HorizontalAlignment="Center" FontSize="40" VerticalAlignment="Center" TextAlignment="Center"/>
+                <PasswordBox x:Name="tbJelszo" Margin="0,0,0,20" Width="300" Height="40" VerticalAlignment="Center" FontSize="30" PasswordChar="*"/>
+                <Button Click="btnBejelentkezes" Content="Bejelentkezés" Width="200" Height="70" VerticalAlignment="Center" FontSize="18" FontFamily="Arial Black" Margin="0,10,0,0"/>
+            </StackPanel>
+        </Popup>
+    </Grid>
+    </Grid>
+</UserControl>

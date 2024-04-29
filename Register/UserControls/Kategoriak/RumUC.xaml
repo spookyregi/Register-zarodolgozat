@@ -1,0 +1,65 @@
+﻿<UserControl x:Class="Register.RumUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Register"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <ContentControl.Resources>
+        <ResourceDictionary Source="Style.xaml"/>
+    </ContentControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.25*"></ColumnDefinition>
+            <ColumnDefinition Width="0.25*"></ColumnDefinition>
+            <ColumnDefinition Width="0.25*"></ColumnDefinition>
+            <ColumnDefinition Width="0.25*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.33*"></RowDefinition>
+            <RowDefinition Height="0.33*"></RowDefinition>
+            <RowDefinition Height="0.33*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel>
+
+        </StackPanel>
+        <Button Grid.Column="0" Grid.Row="0" Click="btnOne" x:Name="btn1">
+            <TextBlock TextWrapping="Wrap" x:Name="t1">
+            </TextBlock>
+        </Button>
+        <Button Grid.Column="1" Grid.Row="0" Click="btnTwo"  x:Name="btn2">
+            <TextBlock TextWrapping="Wrap" x:Name="t2"></TextBlock>
+        </Button>
+        <Button Grid.Column="2" Grid.Row="0" Click="btnThree"  x:Name="btn3">
+            <TextBlock TextWrapping="Wrap" x:Name="t3"></TextBlock>
+        </Button>
+        <Button Grid.Column="3" Grid.Row="0" Click="btnFour"  x:Name="btn4">
+            <TextBlock TextWrapping="Wrap" x:Name="t4"></TextBlock>
+        </Button>
+        <Button Grid.Column="0" Grid.Row="1" Click="btnFive"  x:Name="btn5">
+            <TextBlock TextWrapping="Wrap" x:Name="t5"></TextBlock>
+        </Button>
+        <Button Grid.Column="1" Grid.Row="1" Click="btnSix"  x:Name="btn6">
+            <TextBlock TextWrapping="Wrap" x:Name="t6"></TextBlock>
+        </Button>
+        <Button Grid.Column="2" Grid.Row="1" Click="btnSeven"  x:Name="btn7">
+            <TextBlock TextWrapping="Wrap" x:Name="t7"></TextBlock>
+        </Button>
+        <Button Grid.Column="3" Grid.Row="1" Click="btnEight"  x:Name="btn8">
+            <TextBlock TextWrapping="Wrap" x:Name="t8"></TextBlock>
+        </Button>
+        <Button Grid.Column="0" Grid.Row="2" Click="btnNine"  x:Name="btn9">
+            <TextBlock TextWrapping="Wrap" x:Name="t9"></TextBlock>
+        </Button>
+        <Button Grid.Column="1" Grid.Row="2" Click="btnTen"  x:Name="btn10">
+            <TextBlock TextWrapping="Wrap" x:Name="t10"></TextBlock>
+        </Button>
+        <Button Grid.Column="2" Grid.Row="2" Click="btnEleven"  x:Name="btn11">
+            <TextBlock TextWrapping="Wrap" x:Name="t11"></TextBlock>
+        </Button>
+        <Button Style="{StaticResource v}" Grid.Column="3" Grid.Row="2" Content="Vissza" Click="btnBack"/>
+
+
+    </Grid>
+</UserControl>

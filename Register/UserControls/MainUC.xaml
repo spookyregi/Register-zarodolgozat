@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="Register.UserControls.MainUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Register.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="1080" d:DesignWidth="1920">
+    <Grid Background="#FF798E9D">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.3*"></RowDefinition>
+            <RowDefinition Height="0.25*"></RowDefinition>
+            <RowDefinition Height="0.25*"></RowDefinition>
+            <RowDefinition Height="0.25*"></RowDefinition>
+            <RowDefinition Height="0.1*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width=".20*"></ColumnDefinition>
+            <ColumnDefinition Width=".30*"></ColumnDefinition>
+            <ColumnDefinition Width=".05*"></ColumnDefinition>
+            <ColumnDefinition Width=".30*"></ColumnDefinition>
+
+            <ColumnDefinition Width=".20*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Viewbox Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" Stretch="Fill" Margin="0,0,5,0" >
+            <Button Content="Eladás" Click="ucSell" Background="#FF767676" FontFamily="Lato" HorizontalContentAlignment="Center" BorderThickness="0.3" FontSize="6" Height="11" Width="25" BorderBrush="{x:Null}" />
+        </Viewbox>
+        <Viewbox Grid.Row="2" Grid.Column="3" VerticalAlignment="Center" Stretch="Fill" Margin="5,0,0,0" >
+            <Button Click="ucNyitasZaras" x:Name="nyitasz" Background="#FF767676" FontFamily="Lato" BorderBrush="{x:Null}" HorizontalContentAlignment="Stretch" BorderThickness="0.3" FontSize="6" />
+        </Viewbox>
+        <Viewbox  Stretch="Fill" Grid.Row="3" Grid.Column="3" Margin="5,40,5,40">
+            <Button Content="Termék felvétele" Click="ucAddItem"   Background="#FF3F6DE3" BorderBrush="{x:Null}" FontSize="7" Height="18" Width="65" />
+        </Viewbox>
+        <Viewbox  Stretch="Fill" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" Margin="5,40,5,40">
+            <Button Content="Dolgozó felvétele" Click="ucDolgozoFelvesz" Background="#FF3F6DE3" VerticalAlignment="Center" FontSize="5" Height="15" Width="49" BorderBrush="{x:Null}" />
+        </Viewbox>
+        <Viewbox Grid.ColumnSpan="5"  Grid.RowSpan="1">
+            <Label Content="Regi'ster" HorizontalAlignment="Center" FontFamily="Tw Cen MT" FontWeight="Bold"/>
+        </Viewbox>
+        <Viewbox Grid.Row="5"  Stretch="Fill" Margin="50,-15,50,0">
+            <Button Content="Kilépés"  Click="btnExit"  Background="#FF464D51" FontSize="8" Height="15" Width="32" HorizontalContentAlignment="Center" BorderBrush="Black"/>
+        </Viewbox>
+        <StackPanel>
+            <ListBox x:Name="hali"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

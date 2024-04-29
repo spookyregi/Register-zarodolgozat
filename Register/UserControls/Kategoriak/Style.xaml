@@ -1,0 +1,47 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style TargetType="Button">
+        <Setter Property="BorderThickness" Value="5"/>
+        <Setter Property="FontSize" Value="30"/>
+        <Setter Property="Margin" Value="1.5,1.5,1.5,1.5"/>
+        <Setter Property="BorderBrush">
+            
+            <Setter.Value>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF353535"/>
+                    <GradientStop Color="#FFAFAFAF" Offset="0.423"/>
+                    <GradientStop Color="#FF353535" Offset="0.83"/>
+                    <GradientStop Color="#FF8A8A8A" Offset="0.22"/>
+                    <GradientStop Color="#FF8A8A8A" Offset="0.64"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Background" Value="#FF8B9CE2"/>
+        
+    </Style>
+    <Style TargetType="ListBoxItem">
+        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="BorderBrush" Value="Black"/>
+        <Setter Property="Background" Value="#66FFFFFF"/>
+    </Style>
+
+    <Style x:Key="v" TargetType="Button">
+        <Setter Property="BorderThickness" Value="5"/>
+        <Setter Property="FontSize" Value="30"/>
+        <Setter Property="Margin" Value="1.5,1.5,1.5,1.5"/>
+        <Setter Property="BorderBrush">
+
+            <Setter.Value>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#A03D3D"/>
+                    <GradientStop Color="#DEDEDE" Offset="0.423"/>
+                    <GradientStop Color="#A03D3D" Offset="0.83"/>
+                    <GradientStop Color="#D49A9A" Offset="0.22"/>
+                    <GradientStop Color="#D49A9A" Offset="0.64"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Background" Value="#9B9B9B"/>
+
+    </Style>
+</ResourceDictionary>
